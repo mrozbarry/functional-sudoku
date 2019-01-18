@@ -1,0 +1,65 @@
+body
+  font-family: "Open Sans", sans-serif
+  font-size: 10px
+
+*
+  box-sizing: border-box
+
+.puzzle
+  display: grid
+  grid-template-columns: repeat(9, 5rem)
+
+  .cell
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 1rem
+    color: white
+    font-size: 1rem
+    border-right: 1px lightgray dotted
+    border-bottom: 1px lightgray dotted
+    height: 5rem
+
+    &:nth-child(3n)
+      border-right: 1px black solid
+
+    &:nth-child(9n)
+      border-right: none
+
+    &:nth-child(19),
+    &:nth-child(20),
+    &:nth-child(21),
+    &:nth-child(22),
+    &:nth-child(23),
+    &:nth-child(24),
+    &:nth-child(25),
+    &:nth-child(26),
+    &:nth-child(27),
+    &:nth-child(46),
+    &:nth-child(47),
+    &:nth-child(48),
+    &:nth-child(49),
+    &:nth-child(50),
+    &:nth-child(51),
+    &:nth-child(52),
+    &:nth-child(53),
+    &:nth-child(54)
+      border-bottom: 1px black solid
+
+    &.unsolved
+      background-color: red
+
+    .number
+      display: block
+      width: 2.5rem
+      height: 2.5rem
+      outline: none
+      border: none
+      border-bottom: 1px black solid
+      text-align: center
+      margin: 0.5rem 0
+
+    .candidates
+      font-size: 0.5rem
+      font-weight: light
